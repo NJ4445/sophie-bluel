@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sophie Bluel - Architecte d'intérieur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/Js/script.js" defer></script>
+</head>
+
+<body>
+<header>
+    <div class="mode-edition-section"><i class="fa-regular fa-pen-to-square"></i>
+        <span>Mode édition</span>
+    </div>
+    <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+    <nav>
+        <ul>
+            <li class="strong">projets</li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="./login.html" id="login-button">login</a></li>
+            <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <!-- Modale 1 -->
+    <section class="modal-container" id="modal1" style="display: none;">
+        <div class="modal-content">
+            <div id="modal1-title" class="modal-title"><h2>Galerie photo</h2></div>
+            <div id="gallery-modal" class="modal1-gallery"></div>
+            <hr class="modal-line"> <!-- Ligne de séparation -->
+            <form id="add-project-form-modal">
+                <input type="submit" value="Ajouter une photo">
+            </form>
+            <span class="modal-close close">&times;</span>
+        </div>
+    </section>
+    <!-- Modale 2 -->
+    <section class="modal-container2" id="modal2" style="display: none;">
+        <div class="modal2-content">
+            <div class="modal2-header">
+                <!-- Bouton Retour  -->
+                <svg id="back-to-modal1" class="modal2-back-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                <button class="modal2-close close">&times;</button>
+                <div id="modal2-title" class="modal2-title"><h2>Ajout photo</h2></div>
+            </div>
+            <form id="add-photo-form">
+                <input type="file" id="file-input" name="file" accept=".jpg, .png">
+                <div class="loaded-photo-change"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none">
+                        <path d="M63.5517 15.8879C64.7228 15.8879 65.681 16.8461 65.681 18.0172V60.5768L65.0156 59.7118L46.9165 36.2894C46.3176 35.5042 45.3727 35.0517 44.3879 35.0517C43.4031 35.0517 42.4715 35.5042 41.8594 36.2894L30.8136 50.5824L26.7546 44.8998C26.1557 44.0614 25.1975 43.569 24.1595 43.569C23.1214 43.569 22.1632 44.0614 21.5644 44.9131L10.9178 59.8183L10.319 60.6434V60.6034V18.0172C10.319 16.8461 11.2772 15.8879 12.4483 15.8879H63.5517ZM12.4483 9.5C7.75048 9.5 3.93103 13.3195 3.93103 18.0172V60.6034C3.93103 65.3012 7.75048 69.1207 12.4483 69.1207H63.5517C68.2495 69.1207 72.069 65.3012 72.069 60.6034V18.0172C72.069 13.3195 68.2495 9.5 63.5517 9.5H12.4483ZM23.0948 35.0517C23.9337 35.0517 24.7644 34.8865 25.5394 34.5655C26.3144 34.2444 27.0186 33.7739 27.6118 33.1807C28.2049 32.5876 28.6755 31.8834 28.9965 31.1083C29.3175 30.3333 29.4828 29.5027 29.4828 28.6638C29.4828 27.8249 29.3175 26.9943 28.9965 26.2192C28.6755 25.4442 28.2049 24.74 27.6118 24.1468C27.0186 23.5537 26.3144 23.0831 25.5394 22.7621C24.7644 22.4411 23.9337 22.2759 23.0948 22.2759C22.2559 22.2759 21.4253 22.4411 20.6503 22.7621C19.8752 23.0831 19.171 23.5537 18.5779 24.1468C17.9847 24.74 17.5142 25.4442 17.1931 26.2192C16.8721 26.9943 16.7069 27.8249 16.7069 28.6638C16.7069 29.5027 16.8721 30.3333 17.1931 31.1083C17.5142 31.8834 17.9847 32.5876 18.5779 33.1807C19.171 33.7739 19.8752 34.2444 20.6503 34.5655C21.4253 34.8865 22.2559 35.0517 23.0948 35.0517Z" fill="#B9C5CC"/>
+                    </svg>
+                    <button id="modal2-photo-add-button">+ Ajouter photo</button>
+                    <a>jpg, png : 4mo max</a>
+                </div> 
+                <div class="loaded-photo-place" style="display: none;"></div> 
+                <label for="titre">Titre</label>
+                <input type="text" id="titre" name="titre" autocomplete="off">
+                <div class="categorie-section">
+                    <label for="categorie">Catégorie:</label>
+                    <select id="categorie">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i> <!-- Icône pour indiquer le menu déroulant -->
+                </div>
+                <hr class="modal2-line"> <!-- Ligne de séparation -->
+                <button id="modal2-button">Valider</button> <!-- Bouton Valider -->
+            </form>
+        </div>
+    </section>
+    
+    <section id="introduction">
+        <figure>
+            <img src="./assets/images/sophie-bluel.png" alt="">
+        </figure>
+        <article>
+            <h2>Designer d'espace</h2>
+            <p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+            <p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+            <p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+        </article>
+    </section>
+    <section id="portfolio">
+        <h2>Mes Projets 
+            <span id="modifier-link-container">
+                <span class="open-modal">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-icon">
+                        <path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"/>
+                    </svg>
+                    <a href="#" class="btn-modifier__link">Modifier</a>
+                </span>
+            </span>            
+        </h2>
+
+        <div id="filtres">
+             <!-- Ajout des boutons de filtre -->
+        </div>
+
+        <div class="gallery" id="gallery">
+             <!-- Ajout de la gallery -->
+        </div>
+
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Vous avez un projet ? Discutons-en !</p>
+        <form action="#" method="post">
+            <label for="name">Nom</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <input type="submit" value="Envoyer">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <nav>
+        <ul>
+            <li>Mentions Légales</li>
+        </ul>
+    </nav>
+</footer>
+<!--Modals overlay-->
+<div class="modal-overlay" id="overlay"></div>
+</body>
+</html>
